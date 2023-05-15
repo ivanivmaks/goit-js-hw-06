@@ -1,9 +1,8 @@
 const categoriesList = document.getElementById("categories");
-const items = categoriesList.querySelectorAll(".item");
-const num = items.length;
-console.log("Number og categories:", num);
+const items = categoriesList.children;
+console.log("Number of categories:", items.length);
 
-items.forEach((item) => {
+Array.from(items).forEach((item) => {
   const title = item.querySelector("h2").textContent;
   const count = item.querySelectorAll("li").length;
   console.log("Category:", title);
