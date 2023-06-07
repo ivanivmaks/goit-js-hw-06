@@ -7,15 +7,11 @@ const ingredients = [
   "Condiments",
 ];
 
-const categoriesList = document.getElementById("ingredients");
-const fragment = document.createDocumentFragment();
+const ingredientsList = document.querySelector("#ingredients");
 
 ingredients.forEach((element) => {
   const ingredient = document.createElement("li");
   ingredient.textContent = element;
   ingredient.classList.add("item");
-  fragment.appendChild(ingredient);
-  console.log(ingredient);
+  ingredientsList.append(ingredient);
 });
-
-categoriesList.appendChild(fragment);

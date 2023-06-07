@@ -1,13 +1,15 @@
-const validInput = document.querySelector("#validation-input");
+const input = document.querySelector("#validation-input");
 
-validInput.addEventListener("blur", () => {
-  const length = validInput.getAttribute("data-length");
+input.addEventListener("blur", checkingSymbol);
 
-  if (validInput.value.length === Number(length)) {
-    validInput.classList.add("valid");
-    validInput.classList.remove("invalid");
+function checkingSymbol() {
+  const length = input.getAttribute("data-length");
+
+  if (input.value.length === Number(length)) {
+    input.classList.add("valid");
+    input.classList.remove("invalid");
   } else {
-    validInput.classList.remove("valid");
-    validInput.classList.add("invalid");
+    input.classList.add("invalid");
+    input.classList.remove("valid");
   }
-});
+}
