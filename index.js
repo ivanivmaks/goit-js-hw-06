@@ -14,7 +14,7 @@ function getRandomPosition() {
 }
 
 function generateLove() {
-  if (clickCount < 10) {
+  if (clickCount < 1) {
     const currentButton = container.querySelector("button");
 
     if (currentButton) {
@@ -36,7 +36,7 @@ function generateLove() {
 
     clickCount++;
   } else {
-    container.innerHTML = '<p class="love-message">❤️ I LOVE YOU ❤️</p>';
+    container.innerHTML = '<p class="love-message">❤️ I LOVE YOUлю ❤️</p>';
   }
 }
 
