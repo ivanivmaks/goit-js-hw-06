@@ -1,7 +1,6 @@
 const startBtn = document.querySelector(".change-color");
 const color = document.querySelector(".color");
 const stopBtn = document.querySelector(".stop");
-let interval;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -14,10 +13,4 @@ function changer() {
   color.textContent = getRandomHexColor();
 }
 
-startBtn.addEventListener("click", () => {
-  interval = setInterval(changer, 250);
-});
-
-stopBtn.addEventListener("click", () => {
-  clearInterval(interval);
-});
+startBtn.addEventListener("click", changer);
