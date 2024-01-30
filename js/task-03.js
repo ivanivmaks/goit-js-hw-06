@@ -14,12 +14,9 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const galleryImages = [];
+let list = "";
 
 images.forEach((el) => {
-  galleryImages.push(`<li class = 'item'>
-  <img src = '${el.url}' alt = '${el.alt}'></img>
-  </li>`);
+  list += `<li><img src='${el.url}' alt='${el.alt}'/></li>`;
 });
-
-gallery.insertAdjacentHTML("afterbegin", galleryImages.join(""));
+gallery.insertAdjacentHTML("afterbegin", list);
